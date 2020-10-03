@@ -1,0 +1,174 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url("../image/fondo-ingreso2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    max-width: 1420px;
+    margin: auto;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.information-start{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+}
+
+.start{
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #1e1e1e;
+}
+.start .start-text h2{
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    animation: scale 3s infinite;
+ }
+.start-text{
+    margin-bottom: 50px;
+}
+.start-logo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.start-logo img{
+    width: 80%;
+}
+.start .carrousel-pets .item img{
+    max-width: 280px;
+    margin: auto;
+}
+.start .carrousel-pets .item {
+    max-width: 300px;
+    margin: auto;
+}
+
+.start div .btn{
+    border: none;
+    background: #484848;
+    width: 165px;
+    font-size: 20px;
+    height: 60px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 14px 30px;
+    animation: scale 3s infinite;
+}
+
+.start div .btn:hover{
+    background: #000000;
+}
+.carrousel-pets{
+    display: flex;
+    width: 500px;
+    margin: auto;
+}
+.carrousel-pets .item{
+    width: 300px;
+}
+.owl-nav button span{
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    background: #73E9B9;
+    font-family: monospace;
+    border-radius: 90px;
+    padding: 0 9px;
+    font-size: 35px;
+
+}
+.owl-nav button span:hover{
+    background: #61b593
+}
+.owl-nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 50px;
+    margin: auto;
+    z-index: 0;
+}
+.owl-nav .owl-prev{
+    position: absolute;
+    left: 40px;
+    animation: scale 1s infinite;
+    color: #fff;
+}
+.owl-nav .owl-next{
+    position: absolute;
+    right: 40px;
+    animation: scale 1s infinite;
+}
+.owl-carousel .owl-item img {
+    min-height: 480px;
+}
+.owl-stage{
+    transform: translate3d(-640px, 0px, 0px);
+}
+/* .user-account{
+    background-image: url(../image/fondo-ingreso.jpg);
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+@media (max-width: 1240px){
+    .container{
+        max-width: 920px;
+        margin: auto;
+    }
+    
+}
+@media (max-width: 840px){
+    .container{
+        max-width: 740px;
+        margin: auto;
+    }
+    
+}
+@media (max-width: 540px){
+    body{
+        background-image: url("../image/fondo-ingreso2-mbl.jpg");
+    }
+    .carrousel-pets {
+        width: 90%;
+        margin: auto;
+    }
+    .start{
+        width: 100%;
+        padding: 0;
+    }
+    .owl-nav .owl-prev{
+        left: 15px;
+    }
+    .owl-nav .owl-next{
+        right: 15px;
+    }
+}
+@keyframes scale{
+    0% { transform: scale(0.9); }
+    50% { transform: scale(0.8); }
+    100% { transform: scale(0.9); }
+}
