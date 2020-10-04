@@ -225,6 +225,7 @@ div.page-board{
     /* height: 30px; */
     padding: 8px;
     font-size: 17px;
+    cursor: pointer;
 }
 .chat .chat-form{
     position: absolute;
