@@ -19,26 +19,41 @@ a{
     text-decoration: none;
     box-sizing: border-box;
 }
-
-.section-personaje{
+div.page-board{
     display: flex;
+    width: 100%;
     height: 100%;
 }
-.section-personaje .blackboard{
-    width: 50%;
-    text-align: center;
-    overflow-y: scroll;
-    background: #b9b9b9;
+.section-video{
+    width: 70%;
+    height: 100%;
 }
-.section-personaje .blackboard .user-account{
+.section-video .mascota{
+    height: 100%;
+}
+.section-video .mascota img{
+    width: 100%;
+    height: 100%;
+}
+.section-personaje{
+    display: inline-block;
+    height: 100%;
+    width: 35%;
+}
+.section-personaje .blackboard{
+    width: 100%;
+    text-align: center;
+    background: #b9b9b9;
+    height: 50%;
+}
+/* .section-personaje .blackboard .user-account{
     height: auto;
-    padding-bottom: 45px;
-    background-image: url(../image/fondo-ingreso.jpg);
+    background-image: url(../image/imagen2.jpg);
     background-attachment: fixed;
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
-}
+} */
 .section-personaje .mascota{
     width: 50%;
     text-align: center;
@@ -64,20 +79,24 @@ a{
     z-index: 10;
 }
 .asignature{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     height: 100%;
+    grid-template-columns: 30.3% 30% 30%;
 }
 .asignature div{
-    Flex: 0 0 25%;
-    background: #ffcb00;
-    margin: 10px;
+    display: grid;
+    grid-template-columns: 75px auto;
+    background: #A82121;
+    margin: 5px;
     border-radius: 8px;
-    height: 140px;
+    height: 75px;
+    color: #fff;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
+
 }
 .asignature div:hover{
     background: #eaa708;
@@ -88,12 +107,14 @@ a{
 }
 .asignature div p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 12px;
     letter-spacing: 2px;
+    line-height: 48px;
 }
 .asignature div img{
-    width: 90px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
 }
 .text-carrusel{
     background: #fff;
@@ -116,7 +137,7 @@ a{
     margin: 45px 0;
 }
 .start-logo img{
-    width: 300px;
+    width:100%;
 }
 .name-user{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -172,6 +193,11 @@ a{
 }
 .start-logo{
     animation: scale 3s infinite;
+    position: absolute;
+}
+.user-account{
+    height: 100%;
+    position: relative;
 }
 .cintas{
     height: 42px;
@@ -184,14 +210,74 @@ a{
 .videos{
     margin-bottom: 50px;
 }
+.chatbox{
+    height: 50%;
+}
+.chat{
+    position: relative;
+    height: 100%;
+}
+.chat .chat-user{
+    background: #A82121;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    /* height: 30px; */
+    padding: 8px;
+    font-size: 17px;
+}
+.chat .chat-form{
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.chat .chat-form div{
+    position: relative;
+}
+.chat .chat-form div img{
+    width: 50px;
+    position: absolute;
+    margin-left: 5px;
+    cursor: pointer;
+    height: 60px;
+    top: -10px;
+}
+.chat .chat-form div input{
+width: 85%;
+border: 1px solid #bdbdbd;
+padding: 10px;
+border-radius: 8px;
+}
+.chat .chat-center{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.chat .chat-center .chat-txt{
+height: 75%;
+margin-top: 35px;
+overflow: visible;
+}
+.chat .chat-center .chat-txt .txt{
+    height: 30px;
+    line-height: 30px;
+    padding: 19px 17px;
+}
+.chat .chat-center .chat-txt .txt span{
+font-family: fantasy;
+border: 2px solid #A82121;
+padding: 7px;
+border-radius: 7px;
+}
 @media (max-width: 950px){
     .section-personaje{
         flex-direction: column;
-        height: 100%;
     }
     .section-personaje .blackboard{
         width: 100%;
-        min-height: 850px;
         overflow-y: hidden;
     }
     .section-personaje .line{
@@ -209,8 +295,21 @@ a{
         height: auto;
     }
     .section-personaje .blackboard .user-account {
-        height: auto;
+        /* height: 50%; */
+        height: 100%;
+
     }
+}
+@media (max-width: 840px){
+div.page-board {
+    display: inline-block;
+}
+.section-personaje {
+    width: 100%;
+}
+.section-video {
+    width: 100%;
+}
 }
 @keyframes scale{
     0% { transform: scale(0.9); }

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 $('.carrousel-pets').owlCarousel({
-  items:1,
+  items:3,
   margin: 15,
   nav: true,
   center: true,
@@ -15,10 +15,10 @@ $('.carrousel-pets').owlCarousel({
             items:1
         },
         600:{
-            items:1
+            items:2
         },
         1000:{
-            items:1
+            items:3
         }
     }
 })

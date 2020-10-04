@@ -36,13 +36,14 @@ a{
     color: #1e1e1e;
 }
 .start .start-text h2{
+    margin: 0;
     color: #fff;
     font-size: 35px;
     text-transform: uppercase;
     animation: scale 3s infinite;
  }
 .start-text{
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 .start-logo{
     text-align: center;
@@ -52,11 +53,13 @@ a{
     width: 80%;
 }
 .start .carrousel-pets .item img{
-    max-width: 280px;
+    max-width: 130px;
     margin: auto;
+    /* max-height: 53px; */
+    min-height: 145px;
 }
 .start .carrousel-pets .item {
-    max-width: 300px;
+    max-width: 250px;
     margin: auto;
 }
 
@@ -81,26 +84,24 @@ a{
 }
 .carrousel-pets{
     display: flex;
-    width: 500px;
+    width: 800px;
     margin: auto;
+    height: 495px;
 }
 .carrousel-pets .item{
     width: 300px;
 }
 .owl-nav button span{
-    color: #fff;
+    color: #ffffff;
     font-size: 26px;
     font-weight: bold;
-    background: #73E9B9;
     font-family: monospace;
-    border-radius: 90px;
-    padding: 0 9px;
-    font-size: 35px;
-
+    padding: 0 15px;
+    font-size: 74px;
 }
-.owl-nav button span:hover{
+/* .owl-nav button span:hover{
     background: #61b593
-}
+} */
 .owl-nav{
     position: absolute;
     top: 0;
@@ -122,10 +123,25 @@ a{
     animation: scale 1s infinite;
 }
 .owl-carousel .owl-item img {
-    min-height: 480px;
+    min-height: 350px;
 }
 .owl-stage{
-    transform: translate3d(-640px, 0px, 0px);
+    /* transform: translate3d(-640px, 0px, 0px); */
+}
+.owl-item{
+    transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  opacity: 0.5;
+  z-index: 2;  
+}
+.owl-item.active.center{
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    opacity: 1;
+    z-index: 3;
+}
+.owl-carousel .owl-stage-outer {
+    padding: 45px 0;
 }
 /* .user-account{
     background-image: url(../image/fondo-ingreso.jpg);
@@ -134,6 +150,99 @@ a{
     background-repeat: no-repeat;
     background-size: contain;
 } */
+.card .image-card img{
+    width: 100%;
+}
+.card{
+    background: #fff;
+    border-radius: 35px;
+    padding: 60px 15px 15px;
+}
+.card .image-card{
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.card .name-card h2{
+    color: #61b593;
+    margin: 0;
+    border-bottom: 3px solid;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+.card .card-description{
+    font-size: 11px;
+    color: #717171;
+    font-weight: bold;
+    
+}
+.card .card-option{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #7c9b9d;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.card .card-option .card-ubication{
+ border-right: 1px solid;
+}
+.card .card-option div p:first-child{
+    font-weight: bold;
+}
+.card .card-option p{
+    margin: 0;
+}
+.card .card-theme p{
+    margin: 0;
+    text-transform: uppercase;
+    color: #7c9b9d;
+    text-align: left;
+    font-size: 13px;
+    margin-top: 9px;
+}
+.card .card-theme{
+    border-top: 0.2px solid #bdbdbd;
+    font-weight: bold;
+}
+.card .card-theme .card-theme-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 0px 10px;
+}
+.card .card-theme .card-theme-item div{
+    flex: 0 0 46%;
+    color: #7c9b9d;
+    border: 1px solid #7c9b9d;
+    border-radius: 8px;
+    line-height: 26px;
+    text-transform: capitalize;
+    font-size: 12px;
+    margin: 5px 5px 0 0;
+}
+.card-btn button{
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #00EAB8;
+    color: #fff;
+    min-height: 28px;
+    outline: none;
+    border: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 10px 10px 27px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 27px -12px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 27px -12px rgba(0,0,0,0.75);
+}
+
+.start .carrousel-pets .owl-item .item {
+    padding: 40px 0;
+}
+.start .carrousel-pets .owl-item.active .item {
+    padding: 85px 0 0;
+}
 @media (max-width: 1240px){
     .container{
         max-width: 920px;
@@ -161,10 +270,13 @@ a{
         padding: 0;
     }
     .owl-nav .owl-prev{
-        left: 15px;
+        left: -10px;
     }
     .owl-nav .owl-next{
-        right: 15px;
+        right: -10px;
+    }
+    .owl-nav button span {
+        color: #38ff9a;
     }
 }
 @keyframes scale{
