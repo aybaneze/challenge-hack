@@ -53,10 +53,10 @@ a{
     width: 80%;
 }
 .start .carrousel-pets .item img{
-    max-width: 130px;
+    max-width: 260px;
     margin: auto;
     /* max-height: 53px; */
-    min-height: 145px;
+    min-height: 201px;
 }
 .start .carrousel-pets .item {
     max-width: 250px;
@@ -241,7 +241,7 @@ a{
     padding: 40px 0;
 }
 .start .carrousel-pets .owl-item.active .item {
-    padding: 85px 0 0;
+    padding: 115px 0 0;
 }
 @media (max-width: 1240px){
     .container{
